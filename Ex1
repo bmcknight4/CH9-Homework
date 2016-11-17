@@ -1,0 +1,54 @@
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct fruitNutritionalValues
+{
+	int fruitFat;
+	int fruitSugar;
+	int fruitCarbs;
+};
+
+struct fruitType
+{
+	string fruitName;
+	string fruitColor;
+	fruitNutritionalValues nutVals;
+	
+};
+
+int main()
+{
+	fruitType fruit1;
+
+	cout << "Enter name of fruit: ";
+	cin >> fruit1.fruitName;
+	cout << endl << endl;
+
+	cout << "Enter color of fruit: ";
+	cin >> fruit1.fruitColor;
+	cout << endl << endl;
+
+	cout << "Enter amount of fat the fruit contains: ";
+	cin >> fruit1.nutVals.fruitFat;
+	cout << endl << endl;
+
+	cout << "Enter amount of sugar the fruit contains: ";
+	cin >> fruit1.nutVals.fruitSugar;
+	cout << endl << endl;
+
+	cout << "Enter amount of carbohydrates the fruit contains: ";
+	cin >> fruit1.nutVals.fruitCarbs;
+	cout << endl << endl;
+
+	cout << "Fruit name: " << fruit1.fruitName << " \n" << "Color: "
+		<< fruit1.fruitColor << " \n" << "Contains " 
+		<< fruit1.nutVals.fruitFat << "g of fat, "
+		<< fruit1.nutVals.fruitSugar << "g of sugar, and "
+		<< fruit1.nutVals.fruitCarbs << " of carbs."
+		<< endl << endl;
+
+    return 0;
+}
